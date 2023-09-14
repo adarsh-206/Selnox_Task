@@ -59,3 +59,7 @@ body {
 .editor-container:hover .ql-toolbar.ql-snow {
   border-color: black;
 }
+
+.date-picker .css-10botns-MuiInputBase-input-MuiFilledInput-input {
+  background-color: white;
+}

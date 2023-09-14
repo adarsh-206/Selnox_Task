@@ -9,9 +9,9 @@ function Home() {
                 <h1>Welcome to Employee Management System </h1>
             </div>
             <div className='home-options'>
-                <Link to="/addEmployee"><Button color="inherit">Add Employee</Button></Link>
-                <Link to="/"><Button color="inherit">Employee Details</Button></Link>
-                <Link to="/"><Button color="inherit">Employee Dropdown</Button></Link>
+                <Link to="/registrationForm"><Button color="inherit">Add Employee</Button></Link>
+                <Link to="/employeesTable"><Button color="inherit">Employee Details</Button></Link>
+                <Link to="/dropdown"><Button color="inherit">Employee Dropdown</Button></Link>
             </div>
         </div>
     )

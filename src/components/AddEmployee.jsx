@@ -56,8 +56,6 @@ function AddEmployee(props) {
         color: "#7E98BA", backgroundColor: "#F8FBFF", borderRadius: "16px", border: "1px solid #F8FBFF",
     };
 
-
-
     const handleFirstNameChange = (e) => {
         setFirstName(e.target.value)
     }
@@ -125,7 +123,7 @@ function AddEmployee(props) {
             <h2>Employee Registration Form</h2>
             {
                 loading === true ? <Loader /> :
-                    <Grid container spacing={2} xs={12} md={8} lg={6}>
+                    <Grid item container spacing={2} xs={12} md={8} lg={6}>
                         <Grid item xs={6}>
                             <TextField
                                 label="First Name"
@@ -184,9 +182,9 @@ function AddEmployee(props) {
                                     <MenuItem value="">
                                         <em>None</em>
                                     </MenuItem>
-                                    <MenuItem value="Computer Science">B.E/B.Tech</MenuItem>
-                                    <MenuItem value="Engineering">BCA/MCA</MenuItem>
-                                    <MenuItem value="Business">Bcom/Mcom</MenuItem>
+                                    <MenuItem value="B.E/B.Tech">B.E/B.Tech</MenuItem>
+                                    <MenuItem value="BCA/MCA">BCA/MCA</MenuItem>
+                                    <MenuItem value="Bcom/Mcom">Bcom/Mcom</MenuItem>
                                 </Select>
                             </FormControl>
                         </Grid>

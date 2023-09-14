@@ -14,9 +14,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/addEmployee' element={<AddEmployee />} />
-          <Route path='/employeeDetail' element={<EmployeeDetail />} />
-          <Route path='/employeeDropdown' element={<EmployeeDrop />} />
+          <Route path='/registrationForm' element={<AddEmployee />} />
+          <Route path='/employeesTable' element={<EmployeeDetail />} />
+          <Route path="/employeesTable/:id" element={<AddEmployee />} />
+          <Route path='/dropdown' element={<EmployeeDrop />} />
         </Routes>
       </>
     </BrowserRouter>

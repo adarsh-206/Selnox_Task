@@ -63,14 +63,14 @@ function EmployeeDetail() {
             <h1>Employee List</h1>
             {loading === true ? <Loader /> :
                 <div>
-                    <TableContainer component={Paper} sx={{ borderRadius: "16px" }}>
+                    <TableContainer component={Paper} sx={{ borderRadius: "14px" }}>
                         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                            <TableHead sx={{ borderBottom: "3px solid #D5D5D5" }}>
+                            <TableHead sx={{ borderBottom: "1.9px solid #D5D5D5" }}>
                                 <TableRow sx={{ height: "100px" }}>
 
-                                    {tableHeaders.map((header) => {
+                                    {tableHeaders.map((header, index) => {
                                         return (
-                                            <TableCell sx={tableHeaderCellStyles}>{header}</TableCell>
+                                            <TableCell key={index} sx={tableHeaderCellStyles}>{header}</TableCell>
                                         );
                                     })}
                                 </TableRow>

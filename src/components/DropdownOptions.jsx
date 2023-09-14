@@ -10,11 +10,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import { useNavigate } from 'react-router-dom';
 
-
 const iconStyles = {
     marginRight: "10px", color: "#7D7D7D"
-}
-
+};
 
 function DropdownOption({ employeeId, handleEmployeeDelete }) {
     const navigate = useNavigate();
@@ -28,29 +26,32 @@ function DropdownOption({ employeeId, handleEmployeeDelete }) {
     };
     const handleDelete = () => {
         setAnchorEl(null);
-        handleEmployeeDelete(employeeId)
-    }
+        handleEmployeeDelete(employeeId);
+    };
     const handleEdit = () => {
-        navigate(`/employeesTable/${employeeId}`)
+        navigate(`/employeesTable/${employeeId}`);
         setAnchorEl(null);
-    }
+    };
     const handleView = () => {
+        navigate(`/employeesTable/${employeeId}`);
         setAnchorEl(null);
-    }
+    };
     return (
         <div>
-            <Button
-                id="demo-customized-button"
-                aria-controls={open ? 'demo-customized-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                disableElevation
-                onClick={handleClick}
-            >
-                <IconButton>
-                    <MoreVert />
-                </IconButton>
-            </Button>
+            <div>
+                <Button
+                    id="demo-customized-button"
+                    aria-controls={open ? 'demo-customized-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    disableElevation
+                    onClick={handleClick}
+                >
+                    <IconButton>
+                        <MoreVert />
+                    </IconButton>
+                </Button>
+            </div>
             <Menu
                 id="demo-customized-menu"
                 MenuListProps={{
@@ -79,4 +80,4 @@ function DropdownOption({ employeeId, handleEmployeeDelete }) {
     );
 }
 
-export default DropdownOption
+export default DropdownOption;

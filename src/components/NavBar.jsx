@@ -38,13 +38,13 @@ const NavBar = () => {
 
                 {/* Desktop Menu Links */}
                 <div className="desktop-menu">
-                    <Link to="/addEmployee" className="nav-link-button">
+                    <Link to="/registrationForm" className="nav-link-button">
                         <Button color="inherit">Add Employee</Button>
                     </Link>
-                    <Link to="/employeeDetail" className="nav-link-button">
+                    <Link to="/employeesTable" className="nav-link-button">
                         <Button color="inherit">Employee Details</Button>
                     </Link>
-                    <Link to="/employeeDropdown" className="nav-link-button">
+                    <Link to="/dropdown" className="nav-link-button">
                         <Button color="inherit">Employee Dropdown</Button>
                     </Link>
                 </div>
@@ -64,9 +64,9 @@ const NavBar = () => {
                     }}
                     sx={{ display: { xs: 'block', sm: 'none' } }} // Show on xs (extra small) screens, hide on sm (small) screens and above
                 >
-                    <Link to="/addEmployee" onClick={handleMenuClose}>Add User</Link>
-                    <Link to="/employeeDetail" onClick={handleMenuClose}>Employee Details</Link>
-                    <Link to="/employeeDropdown" onClick={handleMenuClose}>Employee Dropdown</Link>
+                    <Link to="/registrationForm" onClick={handleMenuClose}>Add User</Link>
+                    <Link to="/employeesTable" onClick={handleMenuClose}>Employee Details</Link>
+                    <Link to="/dropdown" onClick={handleMenuClose}>Employee Dropdown</Link>
                 </Menu>
             </Toolbar>
         </AppBar>
