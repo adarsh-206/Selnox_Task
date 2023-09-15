@@ -19,7 +19,7 @@ const NavBar = () => {
         <AppBar position="static" sx={{ backgroundColor: '#003153' }}>
             <Toolbar>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    <Link to="/">Selnox</Link>
+                    <Link to="/"><span style={{ color: 'white' }}>Selnox</span></Link>
                 </Typography>
 
                 {/* Mobile Menu Button */}
