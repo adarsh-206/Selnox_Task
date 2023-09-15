@@ -29,11 +29,11 @@ function DropdownOption({ employeeId, handleEmployeeDelete }) {
         handleEmployeeDelete(employeeId);
     };
     const handleEdit = () => {
-        navigate(`/employeesTable/${employeeId}`);
+        navigate(`/employeeDetail/${employeeId}`);
         setAnchorEl(null);
     };
     const handleView = () => {
-        navigate(`/employeesTable/${employeeId}`);
+        navigate(`/employeeDetail/${employeeId}`);
         setAnchorEl(null);
     };
     return (

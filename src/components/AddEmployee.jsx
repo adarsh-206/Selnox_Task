@@ -88,7 +88,7 @@ function AddEmployee(props) {
     }
 
     const handleCancelClick = () => {
-        navigate("/employeesTable")
+        navigate("/employeeDetail")
     }
     const handleEmployeeSubmission = async () => {
         if (firsName === "" || lastName === "" || dob === "" || studyField === "" || startDate === "" || endDate === "" || salary === "") {
@@ -114,7 +114,7 @@ function AddEmployee(props) {
                 },
                 body: JSON.stringify(employeeObject),
             });
-            navigate("/employeesTable")
+            navigate("/employeeDetail")
         }
     }
 

@@ -18,6 +18,10 @@ const tableCellStyles = {
 const tableHeaderCellStyles = {
     color: "#263857", fontFamily: "Montserrat", fontWeight: 500, fontSize: "16px", minWidth: "150px"
 }
+function formatDateToDdMmYyyy(dateString) {
+    const [year, month, day] = dateString.split('-');
+    return `${day}-${month}-${year}`;
+}
 
 function EmployeeDetail() {
 
@@ -85,9 +89,9 @@ function EmployeeDetail() {
                                             <TableCell component="th" scope="row" sx={tableCellStyles}>
                                                 {row.name}
                                             </TableCell>
-                                            <TableCell sx={tableCellStyles} >{row.dob}</TableCell>
-                                            <TableCell sx={tableCellStyles}>{row.startDate}</TableCell>
-                                            <TableCell sx={tableCellStyles} >{row.endDate}</TableCell>
+                                            <TableCell sx={tableCellStyles} >{formatDateToDdMmYyyy(row.dob)}</TableCell>
+                                            <TableCell sx={tableCellStyles}>{formatDateToDdMmYyyy(row.startDate)}</TableCell>
+                                            <TableCell sx={tableCellStyles} >{formatDateToDdMmYyyy(row.endDate)}</TableCell>
                                             <TableCell sx={tableCellStyles}>{parse(row.description)}</TableCell>
                                             <TableCell sx={tableCellStyles}><DropdownOptions employeeId={row.id} handleEmployeeDelete={handleEmployeeDelete} /></TableCell>
                                         </TableRow>
